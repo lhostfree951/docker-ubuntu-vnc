@@ -1,0 +1,10 @@
+name: ubuntu-vnc
+services:
+  server:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - ./entrypoint.sh:/entrypoint.sh
+    ports:
+      - 6080:6080
+      - 5901:5901
