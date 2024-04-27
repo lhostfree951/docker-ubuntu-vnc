@@ -21,4 +21,7 @@ apt-get install ./tixati_3.24-1_amd64.deb
 
 /usr/bin/tixati
 
-#docker commit <ContainerID> tixati:latest
+# docker commit tixati allape/tixati:latest
+# docker stop tixati
+# docker rm tixati
+# docker run -d --name tixati -p 6080:6080 -v "$(pwd):/root/Downloads" allape/tixati:latest
