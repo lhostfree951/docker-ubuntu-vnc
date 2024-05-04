@@ -1,0 +1,8 @@
+name: tixati
+services:
+  server:
+    image: allape/tixati
+    volumes:
+      - ../home/Downloads:/root/Downloads
+    ports:
+      - 6080:6080
