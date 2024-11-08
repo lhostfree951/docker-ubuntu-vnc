@@ -1,11 +1,8 @@
-FROM ubuntu:22.04
+FROM ubuntu:latest
 
 ENV VNC_PASSWORD=123_567
 ENV DEBIAN_FRONTEND=noninteractive \
-    TZ=America/Los_Angeles
-
-RUN test -n "$http_proxy" && echo "Acquire::http::Proxy \"$http_proxy\";" || exit 0 >> /etc/apt/apt.conf.d/10proxy.conf
-RUN test -n "$https_proxy" && echo "Acquire::https::Proxy \"$https_proxy\";" || exit 0 >> /etc/apt/apt.conf.d/10proxy.conf
+    TZ=America/Sao_Paulo
 
 RUN  apt-get update && \
      apt-get install -y xfce4 xfce4-goodies tigervnc-standalone-server novnc && \
